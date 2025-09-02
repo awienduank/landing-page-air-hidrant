@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Hidrant Pelabuhan Kalibaru Barat - Layanan Air Bersih untuk Kapal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            color: #1e293b;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .floating-button {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .price-tag {
+            background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-water text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="hidden md:block ml-4">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#home" class="text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Beranda</a>
+                            <a href="#services" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Layanan</a>
+                            <a href="#about" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Tentang</a>
+                            <a href="#pricing" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Harga</a>
+                            <a href="#contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Kontak</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition duration-300">
+                        <i class="fas fa-phone-alt mr-2"></i>Pesan Sekarang
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white pt-24 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                        Layanan Air Hidrant Terbaik untuk Kapal di Pelabuhan Kalibaru Barat
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100">
+                        Penyediaan air bersih berkualitas tinggi untuk kebutuhan kapal dengan sistem hidrant yang modern dan terpercaya.
+                    </p>
+                    <div class="price-tag inline-block px-6 py-3 rounded-full mb-6">
+                        <span class="text-2xl font-bold">Rp 35.000</span>
+                        <span class="text-sm">/ Kubik</span>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-white text-blue-600 px-8 py-4 rounded-md font-semibold hover:bg-gray-100 transition duration-300">
+                            <i class="fas fa-truck-water mr-2"></i>Pesan Sekarang
+                        </a>
+                        <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
+                            <i class="fas fa-info-circle mr-2"></i>Info Layanan
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ecbeb62c-1d92-494c-aa7d-f8ff8f401e2c.png" alt="Kapal besar sedang menerima suplai air hidrant di dermaga Pelabuhan Kalibaru Barat dengan latar belakang laut biru dan peralatan hidrant modern" class="rounded-xl shadow-2xl" onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/94f301ea-fa5d-44ed-95a9-1c4df8d9242c.png'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Keunggulan Layanan Kami</h2>
+                <p class="text-xl text-gray-600">Memberikan yang terbaik untuk kebutuhan air kapal Anda</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="service-card bg-gray-50 p-8 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tint text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Air Bersih Berkualitas</h3>
+                    <p class="text-gray-600">Air melalui proses filtrasi dan pemurnian untuk memastikan kualitas terbaik bagi kapal Anda</p>
+                </div>
+                <div class="service-card bg-gray-50 p-8 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-bolt text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Pengisian Cepat</h3>
+                    <p class="text-gray-600">Sistem hidrant modern dengan tekanan tinggi untuk pengisian air yang cepat dan efisien</p>
+                </div>
+                <div class="service-card bg-gray-50 p-8 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-clock text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">24/7 Service</h3>
+                    <p class="text-gray-600">Layanan tersedia 24 jam sehari, 7 hari seminggu untuk memenuhi kebutuhan kapal kapan saja</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Layanan Kami</h2>
+                <p class="text-xl text-gray-600">Berbagai jenis layanan air hidrant untuk berbagai jenis kapal</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5cf195c3-ad1a-4ffd-9144-aa59c9ec7d7b.png" alt="Sistem hidrant port modern dengan selang bertekanan tinggi sedang mengisi tangki air kapal kargo di pelabuhan" class="rounded-xl shadow-lg" onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4f6bac05-7042-4e2a-8f10-f4653b98d67d.png/1e40af/ffffff?text=Modern+Hidrant+System'">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Air Hidrant untuk Kapal Kargo</h3>
+                    <p class="text-gray-600 mb-4">Layanan pengisian air untuk kapal kargo dengan kapasitas besar. Sistem kami dirancang untuk mengisi tangki air kapal dengan cepat dan efisien.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Kapasitas hingga 500 kubik/jam</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Pressure tinggi untuk pengisian cepat</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Sistem monitoring kualitas air real-time</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="lg:order-2">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4116dd65-2286-4de8-8971-9f0cfe704d60.png" alt="Kapal penumpang sedang menerima suplai air bersih melalui sistem hidrant dengan awak kapal yang terlihat profesional" class="rounded-xl shadow-lg" onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/241da628-8e1c-4502-95ab-15f64fd3b45d.png'">
+                </div>
+                <div class="lg:order-1">
+                    <h3 class="text-2xl font-bold mb-4">Air Minum untuk Kapal Penumpang</h3>
+                    <p class="text-gray-600 mb-4">Penyediaan air minum berkualitas tinggi yang memenuhi standar kesehatan untuk kapal penumpang dan cruise.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-极"></i> Air melalui proses reverse osmosis</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Sertifikat kesehatan dan kualitas</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Pengiriman sesuai jadwal kapal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray极9 mb-4">Harga Layanan</h2>
+                <p class="text-xl text-gray-600">Transparan dan kompetitif untuk semua jenis kapal</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white border border-gray-200 rounded-xl p-8 text-center relative">
+                    <div class="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 rounded-bl-xl rounded-tr-xl text-sm">
+                        Popular
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Kapal Kargo</h3>
+                    <div class="text-3xl font-bold text-blue-600 mb-6">
+                        Rp 35.000<span class="text-sm text-gray-600">/kubik</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li>Minimal 100 kubik</li>
+                        <li>Pressure tinggi</li>
+                        <li>Include instalasi</li>
+                        <li>Free water quality test</li>
+                    </ul>
+                    <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-700 transition duration-300 block text-center">
+                        Pesan Sekarang
+                    </a>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-8 text-center">
+                    <h3 class="text-2xl font-bold mb-4">Kapal Penumpang</h3>
+                    <div class="text-3xl font-bold text-blue-600 mb-6">
+                        Rp 40.000<span class="text-sm text-gray-600">/kubik</span>
+                    </div>
+                    <ul class="space极-3 mb-8">
+                        <li>Air minum premium</li>
+                        <li>Reverse osmosis</li>
+                        <li>Sertifikat kesehatan</li>
+                        <li>24/7 availability</li>
+                    </ul>
+                    <a href="#contact" class="bg-gray-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-gray-700 transition duration-300 block text-center">
+                        Pesan Sekarang
+                    </a>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-8 text-center">
+                    <h3 class="text-2xl font-bold mb-4">Kapal Kecil</h3>
+                    <div class="text-3xl font-bold text-blue-600 mb-6">
+                        Rp 45.000<span class="text-sm text-gray-600">/k极ik</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li>Minimal 10 kubik</li>
+                        <li>Fast service</li>
+                        <li>Flexible scheduling</li>
+                        <li>Emergency service</li>
+                    </ul>
+                    <a href="#contact" class="bg-gray-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-gray-700 transition duration-300 block text-center">
+                        Pesan Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Tentang Pelabuhan Kalibaru Barat</h2>
+                <p class="text-xl text-gray-600">Pelabuhan strategis dengan fasilitas modern</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86极1-2a93ccde5887/image/99aa83cd-887d-4f5e-9baa-34dc6b01a35c.png" alt="Panorama luas Pelabuhan Kalibaru Barat dengan berbagai kapal bersandar dan aktivitas bongkar muat yang sibuk dengan latar belakang laut" class="rounded-xl shadow-lg" onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a8c57ac5-8224-4171-abc0-63718a0c196c.png'">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Lokasi Strategis</h3>
+                    <p class="text-gray-600 mb-6">
+                        Pelabuhan Kalibaru Barat merupakan salah satu pelabuhan utama dengan lokasi strategis yang mudah diakses oleh berbagai jenis kapal. Fasilitas hidrant kami terletak di area yang mudah dijangkau dengan akses yang nyaman.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-blue-600">50+</div>
+                            <div class="text-sm text-gray-600">Kapal Terlayani</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-blue-600">24/7</div>
+                            <div class极text-sm text-gray-600">Operasional</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-blue-600">100%</div>
+                            <div class="text-sm text-gray-600">Kepuasan Pelanggan</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-blue-600">500m³</div>
+                            <div class="text-sm text-gray-600">Kapasitas Harian</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Hubungi Kami</h2>
+                <p class="text-xl text-gray-600">Siap melayani kebutuhan air hidrant kapal Anda</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-gray-50 p-8 rounded-xl mb-8">
+                        <h3 class="text-xl font-semibold mb-4">Informasi Kontak</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">Lokasi</div>
+                                    <div class="text-gray-600">Pelabuhan Kalibaru Barat, Dermaga Utama</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone-alt text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">Telepon</div>
+                                    <div class="text-gray-600">+62 877-8287-8933</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">Email</div>
+                                    <div class="text-gray-600">info@airhidrantkalibaru.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-900">Jam Operasional</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span class="font-medium">Senin - Jumat</span>
+                                <span>24 Jam</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-medium">Sabtu - Minggu</span>
+                                <span>24 Jam</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-medium">Hari Libur</span>
+                                <span>24 Jam</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-gray-50 p-8 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-6">Kirim Pesan via WhatsApp</h3>
+                        <form id="waForm" class="space-y-6" onsubmit="return sendWhatsAppMessage(event)">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Nama Perusahaan</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Nama perusahaan kapal" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Nama Kontak</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Nama lengkap" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Telepon/WhatsApp</label>
+                                <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Nomor telepon" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Jenis Kapal</label>
+                                <select class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+                                    <option value="">Pilih Jenis Kapal</option>
+                                    <option value="Kapal Kargo">Kapal Kargo</option>
+                                    <option value="Kapal Penumpang">Kapal Penumpang</option>
+                                    <option value="Kapal Tanker">Kapal Tanker</option>
+                                    <option value="Kapal Kecil">Kapal Kecil</option>
+                                    <option value="Lainnya">Lainnya</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Perkiraan Kebutuhan (kubik)</label>
+                                <input type="number" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Jumlah kubik yang dibutuhkan" min="1" required>
+                            </div>
+                            <button type="submit" class="w-full bg-green-600 text-white py-3 px-6 rounded-md font-semibold hover:bg-green-700 transition duration-300">
+                                <i class="fab fa-whatsapp mr-2"></i>Kirim via WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-water text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold">Air Hidrant Kalibaru</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Layanan air hidrant terpercaya untuk kapal di Pelabuhan Kalibaru Barat dengan harga kompetitif dan kualitas terjamin.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Layanan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="极ext-gray-400 hover:text-white transition duration-300">Air untuk Kapal Kargo</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Air Minum Kapal</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Emergency Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Water Quality Testing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-极00 hover:text-white transition duration-300">Beranda</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Layanan</a></li>
+                        <极i><a href="#pricing" class="text-gray-400 hover:text-white transition duration-300">Harga</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Kontak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Jam Operasional</h4>
+                    <p class="text-gray-400 mb-2">Setiap Hari: 24 Jam</p>
+                    <p class="text-gray-400">Pelabuhan Kalibaru Barat</p>
+                    <div class="mt-4">
+                        <a href="#contact" class="floating-button inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-300">
+                            <i class="fas fa-phone-alt mr-2"></i>Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2024 Air Hidrant Pelabuhan Kalibaru Barat. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // WhatsApp message function
+        function sendWhatsAppMessage(e) {
+            e.preventDefault();
+            const form = e.target;
+            
+            // Get form values
+            const perusahaan = form.querySelector('input[placeholder="Nama perusahaan kapal"]').value.trim();
+            const kontak = form.querySelector('input[placeholder="Nama lengkap"]').value.trim();
+            const telepon = form.querySelector('input[placeholder="Nomor telepon"]').value.trim();
+            const jenisKapal = form.querySelector('select').value;
+            const kebutuhan = form.querySelector('input[type="number"]').value.trim();
+
+            // Basic validation
+            if (!perusahaan || !kontak || !telepon || !jenisKapal || !kebutuhan) {
+                alert('Mohon lengkapi semua data yang diperlukan.');
+                return false;
+            }
+
+            // Create WhatsApp message
+            const message = 
+                `Halo, saya ingin memesan layanan air hidrant untuk kapal:\n\n` +
+                `📋 *INFORMASI PEMESANAN*\n` +
+                `🏢 Nama Perusahaan: ${perusahaan}\n` +
+                `👤 Nama Kontak: ${kontak}\n` +
+                `📞 Telepon/WhatsApp: ${telepon}\n` +
+                `🚢 Jenis Kapal: ${jenisKapal}\n` +
+                `💧 Perkiraan Kebutuhan: ${kebutuhan} kubik\n\n` +
+                `Mohon info lebih lanjut mengenai ketersediaan dan penjadwalan. Terima kasih!`;
+
+            // WhatsApp number (ganti dengan nomor yang sesuai)
+            const waNumber = '6287782878933'; // Format: 628xx (tanpa +)
+
+            // Create WhatsApp URL
+            const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
+            
+            // Open WhatsApp
+            window.open(url, '_blank');
+            
+            // Reset form
+            form.reset();
+            
+            return false;
+        }
+
+        // Add scroll animation
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.service-card, .testimonial-card');
+            elements.forEach(element => {
+                const position = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                if (position < screenPosition) {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.service-card, .testimonial-card');
+            animatedElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+        });
+    </script>
+</body>
+</html>
+
